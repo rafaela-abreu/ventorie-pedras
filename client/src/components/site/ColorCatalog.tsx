@@ -2,22 +2,22 @@ import { BookOpen, Download, Leaf } from "lucide-react";
 import Reveal from "./Reveal";
 import { whatsappLink } from "@/lib/site";
 
-const CATALOG_PDF = "/manus-storage/catalogo_cores_moledo_ventorie_8b8378f0.pdf";
+const CATALOG_PDF = "./catalogo/catalogo-cores-ventorie.pdf";
 const pages = [
   {
     number: "01",
     label: "A essência da Ventorié",
-    image: "/manus-storage/catalogo-cores-1_cd95a471.png",
+    image: "./catalogo/pagina-1.png",
   },
   {
     number: "02",
     label: "Paleta de cores",
-    image: "/manus-storage/catalogo-cores-2_6d048f35.png",
+    image: "./catalogo/pagina-2.png",
   },
   {
     number: "03",
     label: "Acabamentos especiais",
-    image: "/manus-storage/catalogo-cores-3_70126311.png",
+    image: "./catalogo/pagina-3.png",
   },
 ];
 
