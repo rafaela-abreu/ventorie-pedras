@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { asc, desc, eq, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { catalogItems, InsertCatalogItem, InsertUser, settings, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -88,4 +88,80 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function listCatalogItems() {
+  const db = await getDb();
+  if (!db) return [];
+  return db
+    .select()
+    .from(catalogItems)
+    .orderBy(desc(catalogItems.featured), asc(catalogItems.sortOrder), desc(catalogItems.id));
+}
+
+export async function getCatalogItem(id: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const rows = await db.select().from(catalogItems).where(eq(catalogItems.id, id)).limit(1);
+  return rows[0];
+}
+
+export async function createCatalogItem(item: InsertCatalogItem) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  const [result] = await db.insert(catalogItems).values(item);
+  return Number(result.insertId);
+}
+
+export async function updateCatalogItem(
+  id: number,
+  data: Partial<Pick<InsertCatalogItem, "title" | "description" | "category" | "featured" | "sortOrder">>
+) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  await db.update(catalogItems).set(data).where(eq(catalogItems.id, id));
+}
+
+export async function deleteCatalogItem(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  await db.delete(catalogItems).where(eq(catalogItems.id, id));
+}
+
+export async function countCatalogItems() {
+  const db = await getDb();
+  if (!db) return 0;
+  const rows = await db.select({ total: sql<number>`count(*)` }).from(catalogItems);
+  return Number(rows[0]?.total ?? 0);
+}
+
+export async function listCategories() {
+  const db = await getDb();
+  if (!db) return [];
+  const rows = await db
+    .select({ category: catalogItems.category })
+    .from(catalogItems)
+    .groupBy(catalogItems.category)
+    .orderBy(asc(catalogItems.category));
+  return rows.map(row => row.category);
+}
+
+export async function getSetting(key: string): Promise<string | null> {
+  const db = await getDb();
+  if (!db) return null;
+  const rows = await db.select().from(settings).where(eq(settings.key, key)).limit(1);
+  return rows.length > 0 ? rows[0].value : null;
+}
+
+export async function setSetting(key: string, value: string): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  await db
+    .insert(settings)
+    .values({ key, value })
+    .onDuplicateKeyUpdate({ set: { value } });
+}
+
+export async function deleteSetting(key: string): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  await db.delete(settings).where(eq(settings.key, key));
+}

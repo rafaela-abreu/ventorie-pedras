@@ -25,4 +25,33 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Catálogo de pedras e ambientes exibido no site público.
+ * Cada item guarda a chave do objeto no armazenamento e o endereço estável.
+ */
+export const catalogItems = mysqlTable("catalogItems", {
+  id: int("id").autoincrement().primaryKey(),
+  title: varchar("title", { length: 180 }).notNull(),
+  description: text("description"),
+  category: varchar("category", { length: 80 }).notNull().default("Pedras Naturais"),
+  imageKey: varchar("imageKey", { length: 512 }).notNull(),
+  imageUrl: varchar("imageUrl", { length: 1024 }).notNull(),
+  featured: int("featured").notNull().default(0),
+  sortOrder: int("sortOrder").notNull().default(0),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CatalogItem = typeof catalogItems.$inferSelect;
+export type InsertCatalogItem = typeof catalogItems.$inferInsert;
+
+/**
+ * Configurações simples do site (senha do painel, por exemplo).
+ */
+export const settings = mysqlTable("settings", {
+  key: varchar("key", { length: 128 }).primaryKey(),
+  value: text("value").notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Setting = typeof settings.$inferSelect;

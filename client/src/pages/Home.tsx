@@ -1,25 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import SiteHeader from "@/components/site/SiteHeader";
+import Hero from "@/components/site/Hero";
+import About from "@/components/site/About";
+import Services from "@/components/site/Services";
+import Catalog from "@/components/site/Catalog";
+import Process from "@/components/site/Process";
+import Contact from "@/components/site/Contact";
+import SiteFooter from "@/components/site/SiteFooter";
+import WhatsAppFab from "@/components/site/WhatsAppFab";
+import MusicPlayer from "@/components/site/MusicPlayer";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative min-h-screen overflow-x-hidden">
+      <SiteHeader />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <About />
+        <Services />
+        <Catalog />
+        <Process />
+        <Contact />
       </main>
+      <SiteFooter />
+      <MusicPlayer />
+      <WhatsAppFab />
     </div>
   );
 }

@@ -1,0 +1,117 @@
+import { motion } from "framer-motion";
+import { ArrowRight, Gem, Sparkles } from "lucide-react";
+import { HERO_IMAGE, LOGO_LOCKUP, whatsappLink } from "@/lib/site";
+
+const highlights = ["Curadoria exclusiva", "Projetos sob medida", "Atendimento consultivo"];
+
+export default function Hero() {
+  return (
+    <section id="inicio" className="relative overflow-hidden pt-[76px] lg:pt-[88px]">
+      <div className="absolute inset-0">
+        <img
+          src={HERO_IMAGE}
+          alt="Ambiente de alto padrão com parede de pedra natural e iluminação dourada"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(59,5,34,0.97)_0%,rgba(74,6,41,0.92)_38%,rgba(138,11,84,0.62)_68%,rgba(42,3,23,0.55)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_78%_18%,rgba(255,210,74,0.16),transparent_65%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#4a0629]" />
+      </div>
+
+      <div className="container relative flex min-h-[calc(100vh-88px)] flex-col justify-center py-16 lg:py-24">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-[#3b0522]/50 px-4 py-2 backdrop-blur"
+            >
+              <Sparkles size={14} className="text-gold" />
+              <span className="eyebrow !text-[10px] sm:!text-[11px]">
+                Pedras naturais · Design de interiores
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 26 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.08 }}
+              className="mt-6 font-display text-[2.6rem] leading-[1.02] font-extrabold sm:text-6xl lg:text-[4.4rem]"
+            >
+              <span className="text-gold-shine block">Pedras que assinam</span>
+              <span className="text-gold-shine block">ambientes</span>
+              <span className="block text-gold">inesquecíveis</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.18 }}
+              className="mt-7 max-w-xl text-base font-semibold leading-relaxed text-gold-soft sm:text-lg"
+            >
+              Mármores, granitos e revestimentos selecionados por{" "}
+              <strong className="font-extrabold text-gold">Márcia Júlia</strong>, designer de
+              interiores, para transformar cada projeto em uma assinatura de sofisticação.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.26 }}
+              className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+            >
+              <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn-light">
+                Enviar orçamento
+                <ArrowRight size={18} />
+              </a>
+              <a href="#catalogo" className="btn-outline-gold">
+                Explorar o catálogo
+              </a>
+            </motion.div>
+
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.9, delay: 0.36 }}
+              className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
+            >
+              {highlights.map(item => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-sm font-bold tracking-wide text-gold-soft"
+                >
+                  <Gem size={15} className="text-gold" />
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative mx-auto hidden w-full max-w-md lg:block"
+          >
+            <div className="animate-float-slow rounded-[2rem] border border-gold/45 bg-[#2a0317]/55 p-3 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur-md">
+              <img
+                src={LOGO_LOCKUP}
+                alt="Logotipo Ventorié Pedras — Márcia Júlia, designer de interiores"
+                className="w-full rounded-[1.6rem]"
+              />
+            </div>
+            <div className="mt-5 rounded-2xl border border-gold/30 bg-[#3b0522]/70 px-5 py-4 text-center backdrop-blur">
+              <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-gold">
+                Atendimento personalizado
+              </p>
+              <p className="mt-1 text-sm font-semibold text-gold-soft">
+                Brasília e entorno · Projetos em todo o Brasil
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
