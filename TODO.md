@@ -7,6 +7,12 @@
 - Logotipo fornecido (VENTORIÉ PEDRAS / Márcia Júlia / Designer de Interiores) no cabeçalho, hero, seção sobre, contato e rodapé.
 - Layout moderno, elegante, sofisticado e responsivo (celular, tablet e desktop).
 
+## 1A. Posicionamento exclusivo da marca — concluído
+- A empresa foi reposicionada exclusivamente como especialista em paredes de pedra; referências a mármores, granitos, quartzitos e outros serviços foram removidas da experiência pública.
+- Bordão aplicado com destaque: “VENTORIÉ PEDRAS — O ÁPICE DA MAGNITUDE. Ser plena deixa de ser opção e vira posicionamento. Porque, quando o assunto é exuberância, minha escolha é sempre você: VENTORIÉ.”
+- Capa atualizada com imagem ampla e mais nítida de parede de pedra, com menor opacidade de sobreposição para deixar a foto visível.
+- Símbolos de estrela, brilho e diamante removidos da experiência pública; ícones personalizados de folha, pedra e parede foram gerados para a identidade.
+
 ## 2. Cabeçalho, navegação e apresentação — concluído
 - Cabeçalho fixo com logotipo, identificação de Márcia Júlia como designer de interiores e navegação pelas seções (Sobre, Serviços, Catálogo, Contato).
 - Hero com chamada principal, botão branco "Enviar orçamento" e botão secundário "Explorar o catálogo".

@@ -3,23 +3,23 @@ import Reveal from "./Reveal";
 const steps = [
   {
     number: "01",
-    title: "Conversa e briefing",
-    text: "Entendemos o ambiente, o estilo e o investimento do projeto.",
+    title: "Conversa e medida",
+    text: "Entendemos o espaço, a altura, a extensão e o resultado que você deseja.",
   },
   {
     number: "02",
-    title: "Curadoria das pedras",
-    text: "Selecionamos chapas e amostras com você, pessoalmente ou pelo WhatsApp.",
+    title: "Seleção da pedra",
+    text: "Definimos a textura e a tonalidade da pedra para a sua parede.",
   },
   {
     number: "03",
-    title: "Projeto e detalhamento",
-    text: "Definimos recortes, acabamentos e a composição com o mobiliário.",
+    title: "Composição da parede",
+    text: "Ajustamos paginação, encaixes, paisagismo e iluminação para criar presença.",
   },
   {
     number: "04",
-    title: "Entrega e acompanhamento",
-    text: "Acompanhamos a instalação para garantir o resultado imaginado.",
+    title: "Assentamento e acabamento",
+    text: "Acompanhamos a execução até a parede de pedra revelar todo o seu impacto.",
   },
 ];
 
@@ -36,8 +36,7 @@ export default function Process() {
               <span className="text-gold">do início ao acabamento</span>
             </h2>
             <p className="mt-5 max-w-md text-base font-semibold leading-relaxed text-gold-soft">
-              Quatro etapas simples para que você saiba exatamente o que esperar em cada momento
-              do seu projeto.
+              Quatro etapas simples para transformar pedra em uma parede marcante.
             </p>
           </Reveal>
 

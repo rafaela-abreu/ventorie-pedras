@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ImageOff, Loader2, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ImageOff, Leaf, X } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import Reveal from "./Reveal";
 import { whatsappLink } from "@/lib/site";
@@ -54,12 +54,12 @@ export default function Catalog() {
         <Reveal className="max-w-3xl">
           <p className="eyebrow">Catálogo</p>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]">
-            <span className="text-gold-shine">Pedras e ambientes</span>{" "}
-            <span className="text-gold">selecionados</span>
+            <span className="text-gold-shine">Paredes de pedra</span>{" "}
+            <span className="text-gold">pedra selecionadas</span>
           </h2>
           <p className="mt-5 text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-            Uma vitrine viva do nosso acervo. As fotos abaixo são publicadas diretamente pela
-            Ventorié Pedras e atualizadas conforme novas pedras chegam ao showroom.
+            Uma vitrine viva dos nossos projetos em pedra. As fotos abaixo são publicadas
+            diretamente pela Ventorié Pedras e atualizadas conforme novas paredes são entregues.
           </p>
         </Reveal>
 
@@ -110,13 +110,13 @@ export default function Catalog() {
 
         {!isLoading && !isError && filtered.length === 0 && (
           <div className="mt-10 rounded-[1.8rem] border border-gold/30 bg-[#3b0522]/60 p-10 text-center">
-            <Sparkles className="mx-auto text-gold" size={28} />
+            <Leaf className="mx-auto text-gold" size={28} />
             <p className="mt-4 font-display text-2xl font-extrabold text-gold">
               Novas pedras a caminho
             </p>
             <p className="mx-auto mt-3 max-w-xl text-sm font-semibold leading-relaxed text-gold-soft/90">
-              O catálogo está sendo atualizado com as fotos do nosso acervo. Enquanto isso, fale
-              com a Márcia Júlia e receba as opções disponíveis em primeira mão.
+              O catálogo está sendo atualizado com novas paredes de pedra. Enquanto isso,
+              fale com a Márcia Júlia e receba referências, medidas e orçamento.
             </p>
             <a
               href={whatsappLink()}
@@ -218,8 +218,8 @@ export default function Catalog() {
                   </p>
                 )}
                 <p className="text-[13px] font-semibold leading-relaxed text-gold-soft/75">
-                  Gostou desta pedra? Envie uma mensagem e receba disponibilidade, medidas e
-                  valores com atendimento da Márcia Júlia.
+                  Gostou desta parede? Envie uma mensagem e receba referências, medidas e valores
+                  com atendimento da Márcia Júlia.
                 </p>
                 <a
                   href={whatsappLink()}

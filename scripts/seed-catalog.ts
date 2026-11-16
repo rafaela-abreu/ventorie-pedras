@@ -5,64 +5,14 @@ import { catalogItems } from "../drizzle/schema";
 
 const initialItems = [
   {
-    title: "Mármore Verde Imperial",
+    title: "Parede de Pedra",
     description:
-      "Verde profundo com veios dourados. Ideal para paredes de destaque, lavabos e bancadas de alto padrão.",
-    category: "Mármores",
-    imageUrl: "/manus-storage/async-images/eKCduYPpzI8BUkHiyTrmmX/image-3.webp",
-    imageKey: "async-images/eKCduYPpzI8BUkHiyTrmmX/image-3.webp",
+      "Parede de pedra com textura natural e presença marcante para fachadas e jardins.",
+    category: "Paredes de Pedra",
+    imageUrl: "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp",
+    imageKey: "async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp",
     featured: 1,
     sortOrder: 1,
-  },
-  {
-    title: "Mármore Branco Dolomita",
-    description:
-      "Fundo branco leitoso com delicados veios cinza e champagne. Sofisticação atemporal para cozinhas e banheiros.",
-    category: "Mármores",
-    imageUrl: "/manus-storage/async-images/eKCduYPpzI8BUkHiyTrmmX/image-4.webp",
-    imageKey: "async-images/eKCduYPpzI8BUkHiyTrmmX/image-4.webp",
-    featured: 0,
-    sortOrder: 2,
-  },
-  {
-    title: "Granito Preto Absoluto",
-    description:
-      "Preto profundo com pontuações minerais prateadas. Resistência e elegância para superfícies de uso intenso.",
-    category: "Granitos",
-    imageUrl: "/manus-storage/async-images/eKCduYPpzI8BUkHiyTrmmX/image-5.webp",
-    imageKey: "async-images/eKCduYPpzI8BUkHiyTrmmX/image-5.webp",
-    featured: 0,
-    sortOrder: 3,
-  },
-  {
-    title: "Quartzito Azul Imperial",
-    description:
-      "Translucidez rara com veios azuis e dourados. Peça exclusiva para projetos autorais e ambientes assinados.",
-    category: "Quartzitos",
-    imageUrl: "/manus-storage/async-images/41oQNTf2yBURvdBKcXwr3H/image-1.webp",
-    imageKey: "async-images/41oQNTf2yBURvdBKcXwr3H/image-1.webp",
-    featured: 1,
-    sortOrder: 4,
-  },
-  {
-    title: "Revestimento Travertino",
-    description:
-      "Textura natural e tons quentes que aquecem paredes e fachadas, com acabamento artesanal e luz dourada.",
-    category: "Revestimentos",
-    imageUrl: "/manus-storage/async-images/41oQNTf2yBURvdBKcXwr3H/image-2.webp",
-    imageKey: "async-images/41oQNTf2yBURvdBKcXwr3H/image-2.webp",
-    featured: 0,
-    sortOrder: 5,
-  },
-  {
-    title: "Banheiro em Mármore",
-    description:
-      "Projeto assinado por Márcia Júlia: parede em mármore branco e dourado com banheira em pedra escura.",
-    category: "Ambientes",
-    imageUrl: "/manus-storage/async-images/41oQNTf2yBURvdBKcXwr3H/image-3.webp",
-    imageKey: "async-images/41oQNTf2yBURvdBKcXwr3H/image-3.webp",
-    featured: 0,
-    sortOrder: 6,
   },
 ];
 

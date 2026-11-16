@@ -7,12 +7,19 @@ export const INSTAGRAM_HANDLE = "@ventoriepedras";
 export const INSTAGRAM_URL = "https://www.instagram.com/ventoriepedras";
 export const OWNER_NAME = "Márcia Júlia";
 export const OWNER_ROLE = "Designer de Interiores";
+export const BRAND_SLOGAN = "O ÁPICE DA MAGNITUDE.";
+export const BRAND_POSITIONING = "Especialista em design de paredes de pedra.";
+export const BRAND_SIGNATURE =
+  "Porque, quando o assunto é exuberância, minha escolha é sempre você: VENTORIÉ.";
 
 export const LOGO_LOCKUP = "/manus-storage/logo-lockup_f1b4cf8f.jpg";
 export const LOGO_EMBLEM = "/manus-storage/logo-emblem_7d8dbac1.jpg";
 
-export const HERO_IMAGE = "/manus-storage/async-images/eKCduYPpzI8BUkHiyTrmmX/image-1.webp";
-export const SHOWROOM_IMAGE = "/manus-storage/async-images/eKCduYPpzI8BUkHiyTrmmX/image-2.webp";
+export const HERO_IMAGE = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp";
+export const SHOWROOM_IMAGE = HERO_IMAGE;
+export const ICON_LEAF = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-2.webp";
+export const ICON_STONE = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-3.webp";
+export const ICON_WALL = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-4.webp";
 
 export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -29,11 +36,4 @@ export const NAV_LINKS = [
   { label: "Contato", href: "#contato" },
 ];
 
-export const CATEGORY_SUGGESTIONS = [
-  "Mármores",
-  "Granitos",
-  "Quartzitos",
-  "Pedras Naturais",
-  "Revestimentos",
-  "Ambientes",
-];
+export const CATEGORY_SUGGESTIONS = ["Pedra", "Paredes de Pedra", "Projetos em Pedra"];

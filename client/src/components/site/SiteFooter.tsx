@@ -24,8 +24,8 @@ export default function SiteFooter() {
               className="w-full max-w-[290px] rounded-xl border border-gold/25"
             />
             <p className="mt-5 max-w-sm text-sm font-semibold leading-relaxed text-gold-soft/85">
-              Pedras naturais, mármores, granitos e revestimentos com curadoria de design de
-              interiores. Sofisticação que nasce da matéria e se revela no detalhe.
+              Paredes de pedra com presença, textura e acabamento autoral. O ápice da
+              magnitude para fachadas, jardins e áreas externas.
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function SiteFooter() {
             © {new Date().getFullYear()} Ventorié Pedras · {OWNER_NAME}, {OWNER_ROLE}
           </p>
           <p className="text-xs font-semibold tracking-[0.16em] text-gold-soft/60">
-            PEDRAS NATURAIS · DESIGN DE INTERIORES
+            PAREDES DE PEDRA · O ÁPICE DA MAGNITUDE
           </p>
         </div>
       </div>

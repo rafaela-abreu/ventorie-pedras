@@ -26,8 +26,8 @@ export default function Contact() {
               <span className="text-gold">sobre o seu projeto?</span>
             </h2>
             <p className="mt-5 max-w-lg text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-              Envie uma mensagem contando o ambiente que você quer transformar. Respondemos com
-              sugestões de pedras, amostras disponíveis e um orçamento personalizado.
+              Envie uma mensagem contando onde você quer criar sua parede de pedra. A
+              Márcia Júlia responde com referências, medidas e um orçamento personalizado.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -126,8 +126,8 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
                   <p className="text-sm font-semibold leading-relaxed text-gold-soft">
-                    Atendimento em Brasília e entorno, com projetos e entregas em todo o Brasil.
-                    Visitas ao showroom e curadoria de pedras agendadas pelo WhatsApp.
+                    Especialistas em paredes de pedra em Brasília e entorno. Visitas e
+                    orçamentos agendados pelo WhatsApp.
                   </p>
                 </div>
                 <a

@@ -1,8 +1,22 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Gem, Sparkles } from "lucide-react";
-import { HERO_IMAGE, LOGO_LOCKUP, whatsappLink } from "@/lib/site";
+import { ArrowRight, Leaf } from "lucide-react";
+import {
+  BRAND_POSITIONING,
+  BRAND_SIGNATURE,
+  BRAND_SLOGAN,
+  HERO_IMAGE,
+  ICON_LEAF,
+  ICON_STONE,
+  ICON_WALL,
+  LOGO_LOCKUP,
+  whatsappLink,
+} from "@/lib/site";
 
-const highlights = ["Curadoria exclusiva", "Projetos sob medida", "Atendimento consultivo"];
+const highlights = [
+  ["Pedra selecionada", ICON_STONE],
+  ["Paredes com presença", ICON_WALL],
+  ["Acabamento autoral", ICON_LEAF],
+];
 
 export default function Hero() {
   return (
@@ -13,8 +27,8 @@ export default function Hero() {
           alt="Ambiente de alto padrão com parede de pedra natural e iluminação dourada"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(59,5,34,0.97)_0%,rgba(74,6,41,0.92)_38%,rgba(138,11,84,0.62)_68%,rgba(42,3,23,0.55)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_78%_18%,rgba(255,210,74,0.16),transparent_65%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(59,5,34,0.80)_0%,rgba(74,6,41,0.64)_38%,rgba(138,11,84,0.30)_68%,rgba(42,3,23,0.18)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_520px_at_78%_18%,rgba(255,210,74,0.10),transparent_65%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#4a0629]" />
       </div>
 
@@ -27,9 +41,9 @@ export default function Hero() {
               transition={{ duration: 0.7 }}
               className="inline-flex items-center gap-2 rounded-full border border-gold/45 bg-[#3b0522]/50 px-4 py-2 backdrop-blur"
             >
-              <Sparkles size={14} className="text-gold" />
+              <Leaf size={14} className="text-gold" />
               <span className="eyebrow !text-[10px] sm:!text-[11px]">
-                Pedras naturais · Design de interiores
+                Paredes de pedra · Design de exteriores
               </span>
             </motion.div>
 
@@ -39,9 +53,9 @@ export default function Hero() {
               transition={{ duration: 0.85, delay: 0.08 }}
               className="mt-6 font-display text-[2.6rem] leading-[1.02] font-extrabold sm:text-6xl lg:text-[4.4rem]"
             >
-              <span className="text-gold-shine block">Pedras que assinam</span>
-              <span className="text-gold-shine block">ambientes</span>
-              <span className="block text-gold">inesquecíveis</span>
+              <span className="text-gold-shine block">Paredes de pedra</span>
+              <span className="text-gold-shine block">pedra que impõem</span>
+              <span className="block text-gold">presença.</span>
             </motion.h1>
 
             <motion.p
@@ -50,9 +64,8 @@ export default function Hero() {
               transition={{ duration: 0.85, delay: 0.18 }}
               className="mt-7 max-w-xl text-base font-semibold leading-relaxed text-gold-soft sm:text-lg"
             >
-              Mármores, granitos e revestimentos selecionados por{" "}
-              <strong className="font-extrabold text-gold">Márcia Júlia</strong>, designer de
-              interiores, para transformar cada projeto em uma assinatura de sofisticação.
+              A Ventorié Pedras cria paredes de pedra com força, textura e acabamento
+              impecável para fachadas, jardins e ambientes que pedem presença.
             </motion.p>
 
             <motion.div
@@ -76,12 +89,12 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.36 }}
               className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
             >
-              {highlights.map(item => (
+              {highlights.map(([item, icon]) => (
                 <li
                   key={item}
                   className="flex items-center gap-2 text-sm font-bold tracking-wide text-gold-soft"
                 >
-                  <Gem size={15} className="text-gold" />
+                  <img src={icon} alt="" className="h-6 w-6 object-contain" />
                   {item}
                 </li>
               ))}
@@ -103,12 +116,15 @@ export default function Hero() {
             </div>
             <div className="mt-5 rounded-2xl border border-gold/30 bg-[#3b0522]/70 px-5 py-4 text-center backdrop-blur">
               <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-gold">
-                Atendimento personalizado
+                {BRAND_SLOGAN}
               </p>
               <p className="mt-1 text-sm font-semibold text-gold-soft">
-                Brasília e entorno · Projetos em todo o Brasil
+                {BRAND_POSITIONING}
               </p>
             </div>
+            <p className="mt-4 text-center font-display text-sm font-bold leading-relaxed text-gold-soft">
+              {BRAND_SIGNATURE}
+            </p>
           </motion.div>
         </div>
       </div>

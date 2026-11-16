@@ -1,32 +1,31 @@
-import { Armchair, Gem, Grid2x2, Layers, Mountain } from "lucide-react";
+import { Leaf, Mountain, Rows3, TreePine } from "lucide-react";
 import Reveal from "./Reveal";
-import { whatsappLink } from "@/lib/site";
+import { ICON_LEAF, ICON_STONE, ICON_WALL, whatsappLink } from "@/lib/site";
 
 const services = [
   {
     icon: Mountain,
-    title: "Pedras Naturais",
-    text: "Chapas e blocos de pedra natural com veios e texturas únicos, selecionados para dar autenticidade ao projeto.",
+    image: ICON_STONE,
+    title: "Pedra",
+    text: "Pedra selecionada pela textura, tonalidade e presença que entrega ao projeto.",
   },
   {
-    icon: Gem,
-    title: "Mármores",
-    text: "Mármores nacionais e importados em composições elegantes para bancadas, paredes, escadas e detalhes de alto padrão.",
+    icon: Rows3,
+    image: ICON_WALL,
+    title: "Paredes de pedra",
+    text: "Muros e paredes com encaixe orgânico, volume e acabamento para valorizar fachadas e jardins.",
   },
   {
-    icon: Layers,
-    title: "Granitos",
-    text: "Resistência e sofisticação para cozinhas, áreas externas e superfícies de uso intenso, com acabamento impecável.",
+    icon: TreePine,
+    image: ICON_LEAF,
+    title: "Paisagismo com pedra",
+    text: "Composições de pedra que conversam com verde, luz e arquitetura sem perder a naturalidade.",
   },
   {
-    icon: Grid2x2,
-    title: "Revestimentos",
-    text: "Revestimentos em pedra para paredes, fachadas e ambientes internos, criando camadas de textura e luz.",
-  },
-  {
-    icon: Armchair,
-    title: "Design de Interiores",
-    text: "Consultoria e projeto assinados por Márcia Júlia, unindo pedra, iluminação, mobiliário e proporção.",
+    icon: Leaf,
+    image: ICON_LEAF,
+    title: "Acabamento autoral",
+    text: "Cada parede é pensada para revelar a beleza irregular da pedra com acabamento preciso.",
   },
 ];
 
@@ -49,7 +48,6 @@ export default function Services() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
-            const Icon = service.icon;
             const isWide = index === 0;
             return (
               <Reveal
@@ -58,8 +56,8 @@ export default function Services() {
                 className={isWide ? "sm:col-span-2 lg:col-span-1" : undefined}
               >
                 <article className="group relative h-full overflow-hidden rounded-[1.6rem] border border-gold/25 bg-[linear-gradient(160deg,rgba(120,10,70,0.6),rgba(42,3,23,0.85))] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)]">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-[#2a0317]/60 text-gold transition-colors group-hover:bg-gold group-hover:text-[#2a0317]">
-                    <Icon size={22} />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-[#2a0317]/60 transition-colors group-hover:bg-gold">
+                    <img src={service.image} alt="" className="h-8 w-8 object-contain" />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-extrabold text-gold">
                     {service.title}

@@ -1,19 +1,27 @@
-import { Quote } from "lucide-react";
 import Reveal from "./Reveal";
-import { LOGO_EMBLEM, OWNER_NAME, OWNER_ROLE, SHOWROOM_IMAGE } from "@/lib/site";
+import {
+  BRAND_POSITIONING,
+  BRAND_SIGNATURE,
+  BRAND_SLOGAN,
+  ICON_LEAF,
+  LOGO_EMBLEM,
+  OWNER_NAME,
+  OWNER_ROLE,
+  SHOWROOM_IMAGE,
+} from "@/lib/site";
 
 const pillars = [
   {
-    title: "Curadoria de pedras",
-    text: "Seleção criteriosa de chapas, texturas e tonalidades para cada ambiente.",
+    title: "pedra selecionado",
+    text: "Escolha cuidadosa da pedra, textura e tonalidade para cada parede.",
   },
   {
-    title: "Projeto autoral",
-    text: "Cada composição nasce do diálogo entre a pedra, a luz e a arquitetura do espaço.",
+    title: "Parede com presença",
+    text: "Cada composição nasce do encontro entre pedra, paisagismo, luz e arquitetura.",
   },
   {
-    title: "Acabamento impecável",
-    text: "Do detalhe do recorte ao brilho final, o cuidado que valoriza a matéria natural.",
+    title: "Acabamento preciso",
+    text: "O cuidado no assentamento valoriza a força natural da pedra.",
   },
 ];
 
@@ -43,7 +51,7 @@ export default function About() {
                     VENTORIÉ PEDRAS
                   </p>
                   <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold-soft/85">
-                    Desde a primeira pedra
+                    {BRAND_SLOGAN}
                   </p>
                 </div>
               </div>
@@ -54,18 +62,18 @@ export default function About() {
             <Reveal>
               <p className="eyebrow">A marca</p>
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]">
-                <span className="text-gold-shine">A força da pedra natural</span>
+                <span className="text-gold-shine">O ápice da magnitude</span>
                 <br />
-                <span className="text-gold">com o olhar do design</span>
+                <span className="text-gold">em paredes de pedra</span>
               </h2>
               <p className="mt-6 text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-                A Ventorié Pedras nasceu do encontro entre a matéria bruta e o detalhe refinado.
-                Sob a direção de {OWNER_NAME}, {OWNER_ROLE.toLowerCase()}, cada projeto começa
-                escutando o espaço — e termina com uma superfície que dá identidade a ele.
+                A Ventorié Pedras nasceu para transformar pedra em paredes que dominam a
+                paisagem. Sob a direção de {OWNER_NAME}, cada projeto começa na leitura do espaço
+                e termina em uma composição forte, natural e inesquecível.
               </p>
               <p className="mt-4 text-base font-semibold leading-relaxed text-gold-soft/90">
-                Trabalhamos com pedras naturais, mármores, granitos e revestimentos escolhidos a
-                quatro mãos com você, sempre com atendimento próximo, transparente e sob medida.
+                Nossa especialidade é uma só: paredes de pedra, executadas com seleção,
+                proporção e acabamento autoral para fachadas, jardins e áreas externas.
               </p>
             </Reveal>
 
@@ -84,14 +92,13 @@ export default function About() {
 
             <Reveal delay={0.1}>
               <div className="mt-8 flex items-start gap-4 rounded-2xl border border-gold/30 bg-[#2a0317]/45 p-5">
-                <Quote className="mt-1 shrink-0 text-gold" size={22} />
-                <div>
-                  <p className="font-display text-lg font-bold leading-snug text-gold">
-                    “A pedra certa não decora o ambiente: ela revela a personalidade de quem vive
-                    nele.”
-                  </p>
-                  <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-gold-soft/80">
-                    {OWNER_NAME} · {OWNER_ROLE}
+                    <img src={ICON_LEAF} alt="" className="mt-1 h-8 w-8 shrink-0 object-contain" />
+                    <div>
+                      <p className="font-display text-lg font-bold leading-snug text-gold">
+                    “{BRAND_POSITIONING}”
+                      </p>
+                      <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-gold-soft/80">
+                    {BRAND_SIGNATURE}
                   </p>
                 </div>
               </div>
