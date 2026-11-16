@@ -8,7 +8,7 @@ import {
   ICON_LEAF,
   ICON_STONE,
   ICON_WALL,
-  LOGO_LOCKUP,
+  LOGO_EMBLEM,
   whatsappLink,
 } from "@/lib/site";
 
@@ -109,8 +109,8 @@ export default function Hero() {
           >
             <div className="animate-float-slow rounded-[2rem] border border-gold/45 bg-[#2a0317]/55 p-3 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur-md">
               <img
-                src={LOGO_LOCKUP}
-                alt="Logotipo Ventorié Pedras — Márcia Júlia, designer de interiores"
+                src={LOGO_EMBLEM}
+                alt="Emblema Ventorié Pedras — Márcia Júlia, idealizadora da marca"
                 className="w-full rounded-[1.6rem]"
               />
             </div>

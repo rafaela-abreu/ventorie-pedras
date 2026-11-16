@@ -3,7 +3,7 @@ import {
   EMAIL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
-  LOGO_LOCKUP,
+  LOGO_EMBLEM,
   NAV_LINKS,
   OWNER_NAME,
   OWNER_ROLE,
@@ -19,8 +19,8 @@ export default function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
             <img
-              src={LOGO_LOCKUP}
-              alt="Ventorié Pedras — Márcia Júlia, designer de interiores"
+              src={LOGO_EMBLEM}
+              alt="Emblema Ventorié Pedras — Márcia Júlia, idealizadora da marca"
               className="w-full max-w-[290px] rounded-xl border border-gold/25"
             />
             <p className="mt-5 max-w-sm text-sm font-semibold leading-relaxed text-gold-soft/85">

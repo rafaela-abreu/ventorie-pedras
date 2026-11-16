@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Check, ImagePlus, Loader2, Pencil, Star, Trash2, Upload, X } from "lucide-react";
+import { Check, ImagePlus, Leaf, Loader2, Pencil, Trash2, Upload, X } from "lucide-react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import { CATEGORY_SUGGESTIONS } from "@/lib/site";
@@ -226,7 +226,7 @@ export default function CatalogManager() {
             }`}
           >
             <span className="flex items-center gap-2 font-display text-sm font-bold text-gold">
-              <Star size={16} className={featured ? "fill-gold text-gold" : "text-gold"} />
+              <Leaf size={16} className={featured ? "fill-gold text-gold" : "text-gold"} />
               Destacar no catálogo
             </span>
             <span className="font-display text-xs font-extrabold uppercase tracking-[0.16em] text-gold-soft/80">
@@ -403,7 +403,7 @@ export default function CatalogManager() {
                     : "border-gold/30 bg-[#3b0522]/60"
                 }`}
               >
-                <Star size={16} className={editing.featured === 1 ? "fill-gold" : ""} />
+                <Leaf size={16} className={editing.featured === 1 ? "fill-gold" : ""} />
                 {editing.featured === 1 ? "Em destaque" : "Sem destaque"}
               </button>
 

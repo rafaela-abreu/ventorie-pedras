@@ -4,7 +4,7 @@
 - Fundo roxo fúcsia/magenta em todas as seções do site (sem áreas brancas de fundo).
 - Toda a escrita em dourado bem nítido, com fonte arredondada (Baloo 2 / Nunito), grande, em negrito e destacada.
 - Botões brancos com texto preto em todo o site (header, hero, catálogo, contato, painel).
-- Logotipo fornecido (VENTORIÉ PEDRAS / Márcia Júlia / Designer de Interiores) no cabeçalho, hero, seção sobre, contato e rodapé.
+- Identidade Ventorié Pedras / Márcia Júlia como idealizadora da marca no cabeçalho, hero, seção sobre, contato e rodapé.
 - Layout moderno, elegante, sofisticado e responsivo (celular, tablet e desktop).
 
 ## 1A. Posicionamento exclusivo da marca — concluído
@@ -14,9 +14,9 @@
 - Símbolos de estrela, brilho e diamante removidos da experiência pública; ícones personalizados de folha, pedra e parede foram gerados para a identidade.
 
 ## 2. Cabeçalho, navegação e apresentação — concluído
-- Cabeçalho fixo com logotipo, identificação de Márcia Júlia como designer de interiores e navegação pelas seções (Sobre, Serviços, Catálogo, Contato).
+- Cabeçalho fixo com logotipo, identificação de Márcia Júlia como idealizadora da marca e navegação pelas seções (Sobre, Serviços, Catálogo, Contato).
 - Hero com chamada principal, botão branco "Enviar orçamento" e botão secundário "Explorar o catálogo".
-- Seção institucional sobre a Ventorié Pedras e a proposta de atendimento e design de interiores.
+- Seção institucional sobre a Ventorié Pedras e a proposta de design de paredes de pedra.
 
 ## 3. Serviços — concluído
 - Seção com Pedras Naturais, Mármores, Granitos, Revestimentos e Design de Interiores, cada um com descrição própria, ícones e cartão de atendimento.

@@ -112,7 +112,7 @@ export default function Admin() {
         </div>
 
         <p className="mt-10 text-center text-xs font-semibold text-gold-soft/60">
-          Ventorié Pedras · Márcia Júlia, Designer de Interiores · pedrasventorie@gmail.com
+          Ventorié Pedras · Márcia Júlia, idealizadora da marca · pedrasventorie@gmail.com
         </p>
       </div>
     </div>

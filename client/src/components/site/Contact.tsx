@@ -4,7 +4,7 @@ import {
   EMAIL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
-  LOGO_LOCKUP,
+  LOGO_EMBLEM,
   OWNER_NAME,
   OWNER_ROLE,
   WHATSAPP_DISPLAY,
@@ -106,8 +106,8 @@ export default function Contact() {
             <div className="relative overflow-hidden rounded-[2rem] border border-gold/35 bg-[linear-gradient(165deg,rgba(120,10,70,0.72),rgba(42,3,23,0.94))] p-6 shadow-[0_40px_90px_-45px_rgba(0,0,0,0.95)] sm:p-8">
               <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gold/10 blur-2xl" />
               <img
-                src={LOGO_LOCKUP}
-                alt="Logotipo Ventorié Pedras com Márcia Júlia, designer de interiores"
+                src={LOGO_EMBLEM}
+                alt="Emblema Ventorié Pedras com Márcia Júlia, idealizadora da marca"
                 className="w-full rounded-[1.4rem] border border-gold/25"
               />
               <div className="mt-6 space-y-4">

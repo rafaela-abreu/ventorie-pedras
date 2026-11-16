@@ -40,7 +40,7 @@ export default function SiteHeader() {
               VENTORIÉ PEDRAS
             </span>
             <span className="mt-1 text-[8px] font-bold uppercase tracking-[0.12em] text-gold-soft/85 sm:text-[9.5px] sm:tracking-[0.2em] lg:text-[10.5px] lg:tracking-[0.24em]">
-              Márcia Júlia · Designer de Interiores
+              Márcia Júlia · Idealizadora da marca
             </span>
           </span>
         </a>
