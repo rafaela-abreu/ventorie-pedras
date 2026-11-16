@@ -19,7 +19,7 @@
 - Seção institucional sobre a Ventorié Pedras e a proposta de design de paredes de pedra.
 
 ## 3. Serviços — concluído
-- Seção com Pedras Naturais, Mármores, Granitos, Revestimentos e Design de Interiores, cada um com descrição própria, ícones e cartão de atendimento.
+- Seção institucional focada exclusivamente em design de paredes de pedra, com descrição, ícones de folha/pedra/muro e cartão de atendimento.
 
 ## 4. Catálogo público dinâmico — concluído
 - Galeria com fotos vindas do banco de dados, exibindo título, descrição e categoria.
@@ -44,6 +44,11 @@
 - Instagram @ventoriepedras com link para https://www.instagram.com/ventoriepedras.
 - Botão branco "Enviar orçamento" abrindo o WhatsApp +55 61 98573-7591 com a mensagem pré-preenchida "Gostaria de realizar um orçamento com a empresa VentoriÉ Pedras".
 - Botão flutuante de WhatsApp em todas as páginas e nome de Márcia Júlia na área de contato.
+
+## 8A. Favicon e catálogo de cores — concluído
+- Favicon Ventorié criado a partir do emblema da marca nos formatos PNG 32px, PNG 64px e Apple Touch Icon 180px.
+- Nova aba “Cores” adicionada à navegação com apresentação profissional do catálogo de cores enviado pela cliente, incluindo prévias das três páginas, botão para abrir o PDF completo, botão para baixar e CTA de atendimento pelo WhatsApp.
+- PDF original e prévias de página armazenados no projeto para uso no site.
 
 ## 9. Publicação e entrega — em andamento
 - Build de produção validado (dist/index.js + dist/public), checkpoint salvo e site publicado.

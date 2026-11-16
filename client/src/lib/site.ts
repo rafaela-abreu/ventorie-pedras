@@ -12,7 +12,6 @@ export const BRAND_POSITIONING = "Especialista em design de paredes de pedra.";
 export const BRAND_SIGNATURE =
   "Porque, quando o assunto é exuberância, minha escolha é sempre você: VENTORIÉ.";
 
-export const LOGO_LOCKUP = "/manus-storage/logo-lockup_f1b4cf8f.jpg";
 export const LOGO_EMBLEM = "/manus-storage/logo-emblem_7d8dbac1.jpg";
 
 export const HERO_IMAGE = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp";
@@ -31,8 +30,10 @@ export function mailtoLink(subject = "Orçamento Ventorié Pedras"): string {
 
 export const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
+  { label: "Inspirações", href: "#inspiracoes" },
   { label: "Serviços", href: "#servicos" },
   { label: "Catálogo", href: "#catalogo" },
+  { label: "Cores", href: "#cores" },
   { label: "Contato", href: "#contato" },
 ];
 
