@@ -9,7 +9,7 @@ const initialItems = [
     description:
       "Parede de pedra com textura natural e presença marcante para fachadas e jardins.",
     category: "Paredes de Pedra",
-    imageUrl: "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp",
+    imageUrl: "/images/wall-house.webp",
     imageKey: "async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp",
     featured: 1,
     sortOrder: 1,

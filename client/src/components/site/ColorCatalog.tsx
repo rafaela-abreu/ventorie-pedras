@@ -61,12 +61,12 @@ const featuredWalls = [
   {
     title: "Cinza com glitter",
     subtitle: "Sofisticação mineral",
-    image: "/manus-storage/async-images/7WNZJE1idTmPWXNYC6gvYX/image-1.webp",
+    image: "/images/wall-detail.jpg",
   },
   {
     title: "Azul bebê com glitter",
     subtitle: "Delicadeza luminosa",
-    image: "/manus-storage/async-images/7WNZJE1idTmPWXNYC6gvYX/image-2.webp",
+    image: "/images/wall-interior.jpg",
   },
 ] as const;
 

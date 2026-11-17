@@ -13,13 +13,13 @@ export const BRAND_POSITIONING = "Especialista em design de paredes de pedra.";
 export const BRAND_SIGNATURE =
   "Porque, quando o assunto é exuberância, minha escolha é sempre você: VENTORIÉ.";
 
-export const LOGO_EMBLEM = "/manus-storage/logo-emblem_7d8dbac1.jpg";
+export const LOGO_EMBLEM = "/images/logo-emblem.jpg";
 
-export const HERO_IMAGE = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-1.webp";
+export const HERO_IMAGE = "/images/wall-house.webp";
 export const SHOWROOM_IMAGE = HERO_IMAGE;
-export const ICON_LEAF = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-2.webp";
-export const ICON_STONE = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-3.webp";
-export const ICON_WALL = "/manus-storage/async-images/Ss46ePoNAF5A2Dlk9z3b5t/image-4.webp";
+export const ICON_LEAF = "/images/wall-detail.jpg";
+export const ICON_STONE = "/images/wall-garden.webp";
+export const ICON_WALL = "/images/wall-night.jpg";
 
 export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
