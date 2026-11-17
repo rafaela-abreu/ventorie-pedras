@@ -72,9 +72,7 @@ export default function InspirationMarquee() {
               loading={index < 8 ? "eager" : "lazy"}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/85 via-transparent to-transparent opacity-80" />
-            <span className="absolute inset-x-4 bottom-3 font-display text-xs font-extrabold leading-tight text-gold-soft sm:text-sm">
-              {alt}
-            </span>
+            <span className="sr-only">{alt}</span>
           </a>
         ))}
       </div>
