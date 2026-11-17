@@ -7,15 +7,14 @@ import { ENV } from "./_core/env";
 
 export const ADMIN_COOKIE_NAME = "ventorie_admin";
 const PASSWORD_SETTING_KEY = "admin_password_hash";
-const DEFAULT_PASSWORD = process.env.ADMIN_PASSWORD?.trim() || "ventorie2026";
 const SESSION_TTL_SECONDS = 60 * 60 * 24 * 7;
 
 function getSecretKey(): Uint8Array {
-  const secret =
-    process.env.VENTORIE_SESSION_SECRET ||
-    ENV.cookieSecret ||
-    "ventorie-pedras-painel-secret-key";
-  return new TextEncoder().encode(secret.padEnd(32, "0"));
+  const secret = process.env.VENTORIE_SESSION_SECRET || ENV.cookieSecret;
+  if (!secret || secret.length < 32) {
+    throw new Error("Configure um segredo de sessão com pelo menos 32 caracteres.");
+  }
+  return new TextEncoder().encode(secret);
 }
 
 export function hashPassword(password: string): string {
@@ -54,14 +53,15 @@ export async function isPasswordConfigured(): Promise<boolean> {
   return (await readStoredHash()) !== null;
 }
 
-/** Valida a senha do painel. Usa a senha salva no banco ou a senha padrão inicial. */
+/** Valida a senha do painel. Sem hash inicial salvo, nenhum acesso é permitido. */
 export async function checkAdminPassword(password: string): Promise<boolean> {
   const stored = await readStoredHash();
   if (stored) return verifyHashedPassword(password, stored);
-  return safeEqual(password, DEFAULT_PASSWORD);
+  return false;
 }
 
 export async function saveAdminPassword(newPassword: string): Promise<void> {
+  if (newPassword.length < 12) throw new Error("Use uma senha com pelo menos 12 caracteres.");
   const db = await getDb();
   if (!db) throw new Error("Banco de dados indisponível");
   const value = hashPassword(newPassword);

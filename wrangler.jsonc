@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ventorie-pedras",
+  "account_id": "7f5d866ecef28f8ce36edaa0496e01ae",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-17",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ventorie-pedras-db",
+      "database_id": "228b1afb-ba0a-43af-8463-4a954716bcac"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "MEDIA",
+      "id": "adbd06c1d75e4f04b2f0573ee4e81b08"
+    }
+  ],
+  "assets": {
+    "directory": "./dist/public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/media/*"]
+  }
+}

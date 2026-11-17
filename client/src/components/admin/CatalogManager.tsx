@@ -3,7 +3,7 @@ import { Check, ImagePlus, Leaf, Loader2, Pencil, Trash2, Upload, X } from "luci
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import { CATEGORY_SUGGESTIONS } from "@/lib/site";
-import { formatBytes, readFileAsBase64, type UploadPayload } from "@/lib/files";
+import { formatBytes } from "@/lib/files";
 
 type CatalogItem = {
   id: number;
@@ -24,6 +24,7 @@ export default function CatalogManager() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState<File | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -97,25 +98,34 @@ export default function CatalogManager() {
       toast.error("Informe um título para a foto.");
       return;
     }
-    let payload: UploadPayload;
+    setIsUploading(true);
     try {
-      payload = await readFileAsBase64(file);
-    } catch {
-      toast.error("Não foi possível ler a imagem.");
-      return;
+      const response = await fetch("/api/uploads/catalog", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": file.type,
+          "X-File-Name": encodeURIComponent(file.name),
+        },
+        body: file,
+      });
+      const uploaded = (await response.json()) as { key?: string; error?: string };
+      if (!response.ok || !uploaded.key) {
+        throw new Error(uploaded.error || "Não foi possível enviar a imagem.");
+      }
+      createItem.mutate({
+        title: title.trim(),
+        description: description.trim(),
+        category: category.trim() || "Pedras Naturais",
+        featured,
+        sortOrder: Number(sortOrder) || 0,
+        imageKey: uploaded.key,
+      });
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível enviar a imagem.");
+    } finally {
+      setIsUploading(false);
     }
-    createItem.mutate({
-      title: title.trim(),
-      description: description.trim(),
-      category: category.trim() || "Pedras Naturais",
-      featured,
-      sortOrder: Number(sortOrder) || 0,
-      image: {
-        fileName: payload.fileName,
-        mimeType: payload.mimeType,
-        dataBase64: payload.dataBase64,
-      },
-    });
   };
 
   return (
@@ -237,10 +247,10 @@ export default function CatalogManager() {
           <button
             type="button"
             onClick={submit}
-            disabled={createItem.isPending}
+            disabled={createItem.isPending || isUploading}
             className="btn-light w-full"
           >
-            {createItem.isPending ? (
+            {createItem.isPending || isUploading ? (
               <Loader2 size={18} className="animate-spin" />
             ) : (
               <Upload size={18} />
