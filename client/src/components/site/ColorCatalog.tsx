@@ -1,4 +1,5 @@
-import { BookOpen, Download, Leaf } from "lucide-react";
+import { BookOpen, Download, Leaf, X } from "lucide-react";
+import { useState } from "react";
 import Reveal from "./Reveal";
 import { whatsappLink } from "@/lib/site";
 
@@ -21,38 +22,40 @@ const pages = [
   },
 ];
 
-const palette = [
-  "Azul Bebê",
-  "Azul Serenity",
-  "Azul Tiffany",
-  "Azul Petróleo",
-  "Azul Marinho",
-  "Pêssego",
-  "Rosé",
-  "Rosa Queimado",
-  "Nude",
-  "Terracota",
-  "Bordô",
-  "Vinho",
-  "Verde Esmeralda",
-  "Verde Oliva",
-  "Verde Sálvia",
-  "Verde Musgo",
-  "Branco Clean",
-  "Branco Pérola",
-  "Off-White",
-  "Areia",
-  "Palha",
-  "Camurça",
-  "Bege Champagne",
-  "Marrom Café",
-  "Marrom Conhaque",
-  "Cobre",
-  "Cinza Claro",
-  "Cinza Concreto",
-  "Grafite",
-  "Preto Ônix",
-] as const;
+type PaletteColor = readonly [string, string];
+
+const palette: readonly PaletteColor[] = [
+  ["Azul Bebê", "#a8d8f0"],
+  ["Azul Serenity", "#9fc5e8"],
+  ["Azul Tiffany", "#81d8d0"],
+  ["Azul Petróleo", "#176b78"],
+  ["Azul Marinho", "#162b52"],
+  ["Pêssego", "#f5b7a3"],
+  ["Rosé", "#c8899e"],
+  ["Rosa Queimado", "#a96773"],
+  ["Nude", "#d8b6a5"],
+  ["Terracota", "#bb6748"],
+  ["Bordô", "#6f2638"],
+  ["Vinho", "#7a1f3d"],
+  ["Verde Esmeralda", "#1d8a68"],
+  ["Verde Oliva", "#708238"],
+  ["Verde Sálvia", "#a4b494"],
+  ["Verde Musgo", "#596b45"],
+  ["Branco Clean", "#f4f2e8"],
+  ["Branco Pérola", "#f0e1c5"],
+  ["Off-White", "#ede7db"],
+  ["Areia", "#d9c39a"],
+  ["Palha", "#d1b27b"],
+  ["Camurça", "#a88968"],
+  ["Bege Champagne", "#d5b486"],
+  ["Marrom Café", "#664536"],
+  ["Marrom Conhaque", "#8a5a3b"],
+  ["Cobre", "#b66b45"],
+  ["Cinza Claro", "#b8bdba"],
+  ["Cinza Concreto", "#929997"],
+  ["Grafite", "#3c4144"],
+  ["Preto Ônix", "#17181b"],
+];
 
 const featuredWalls = [
   {
@@ -68,6 +71,8 @@ const featuredWalls = [
 ] as const;
 
 export default function ColorCatalog() {
+  const [selectedColor, setSelectedColor] = useState<PaletteColor | null>(null);
+
   return (
     <section id="cores" className="relative overflow-hidden py-20 sm:py-28">
       <div className="absolute inset-x-0 top-0 h-px gold-line opacity-70" />
@@ -135,34 +140,21 @@ export default function ColorCatalog() {
 
         <Reveal delay={0.18}>
           <div className="mt-14">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="eyebrow">Seleção de tonalidades</p>
-                <h3 className="mt-3 text-2xl sm:text-3xl">
-                  <span className="text-gold-shine">30 nomes de cor</span>{" "}
-                  <span className="text-gold">para escolher a sua parede.</span>
-                </h3>
-              </div>
-              <p className="max-w-sm text-sm font-semibold leading-relaxed text-gold-soft/75">
-                Nomes comerciais de referência para visualizar a personalidade de cada acabamento.
-              </p>
-            </div>
-            <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-              {palette.map((color, index) => (
-                <div
-                  key={color}
-                  className="flex items-center gap-2 rounded-2xl border border-gold/20 bg-[#3b0522]/50 px-3 py-3 font-display text-xs font-extrabold text-gold-soft transition-colors hover:border-gold/60 hover:bg-[#5c0838]/60 sm:text-sm"
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+              {palette.map(([name, hex]) => (
+                <button
+                  key={name}
+                  type="button"
+                  onClick={() => setSelectedColor([name, hex])}
+                  className="flex items-center gap-2 rounded-2xl border border-gold/20 bg-[#3b0522]/50 px-3 py-3 text-left font-display text-xs font-extrabold text-gold-soft transition-colors hover:border-gold/60 hover:bg-[#5c0838]/60 sm:text-sm"
+                  aria-label={`Ver a cor ${name}`}
                 >
                   <span
                     className="h-3 w-3 shrink-0 rounded-full border border-white/35"
-                    style={{
-                      background: [
-                        "#a8d8f0", "#9fc5e8", "#81d8d0", "#176b78", "#162b52", "#f5b7a3", "#c8899e", "#a96773", "#d8b6a5", "#bb6748", "#6f2638", "#7a1f3d", "#1d8a68", "#708238", "#a4b494", "#596b45", "#f4f2e8", "#f0e1c5", "#ede7db", "#d9c39a", "#d1b27b", "#a88968", "#d5b486", "#664536", "#8a5a3b", "#b66b45", "#b8bdba", "#929997", "#3c4144", "#17181b",
-                      ][index],
-                    }}
+                    style={{ background: hex }}
                   />
-                  {color}
-                </div>
+                  {name}
+                </button>
               ))}
             </div>
           </div>
@@ -201,6 +193,32 @@ export default function ColorCatalog() {
             </div>
           </div>
         </Reveal>
+
+        {selectedColor && (
+          <div className="fixed inset-0 z-[90] flex items-center justify-center bg-[#16000d]/85 p-4 backdrop-blur-sm">
+            <div className="relative w-full max-w-sm rounded-[2rem] border border-gold/40 bg-[#2a0317] p-5 shadow-[0_40px_100px_-35px_rgba(0,0,0,0.95)]">
+              <button
+                type="button"
+                onClick={() => setSelectedColor(null)}
+                aria-label="Fechar visualização da cor"
+                className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-gold/45 bg-[#2a0317]/80 text-gold hover:bg-white hover:text-[#12000a]"
+              >
+                <X size={18} />
+              </button>
+              <div
+                className="h-56 rounded-[1.4rem] border border-white/20 shadow-inner"
+                style={{ backgroundColor: selectedColor[1] }}
+              />
+              <div className="px-1 pb-1 pt-5">
+                <p className="eyebrow">Amostra selecionada</p>
+                <h3 className="mt-2 font-display text-3xl font-extrabold text-gold">{selectedColor[0]}</h3>
+                <p className="mt-2 font-mono text-sm font-bold uppercase tracking-[0.18em] text-gold-soft/80">
+                  {selectedColor[1]}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
