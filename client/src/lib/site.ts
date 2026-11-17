@@ -8,6 +8,7 @@ export const INSTAGRAM_URL = "https://www.instagram.com/ventoriepedras";
 export const OWNER_NAME = "Márcia Júlia";
 export const OWNER_ROLE = "Idealizadora da marca Ventorié Pedras";
 export const BRAND_SLOGAN = "O ÁPICE DA MAGNITUDE.";
+export const SHARE_TITLE = "VentoriÉ Pedras | O encontro da elegância ao Paisagismo";
 export const BRAND_POSITIONING = "Especialista em design de paredes de pedra.";
 export const BRAND_SIGNATURE =
   "Porque, quando o assunto é exuberância, minha escolha é sempre você: VENTORIÉ.";
