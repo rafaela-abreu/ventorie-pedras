@@ -1,21 +1,18 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Leaf, Mountain, Rows3 } from "lucide-react";
 import {
   BRAND_POSITIONING,
   BRAND_SIGNATURE,
   BRAND_SLOGAN,
   HERO_IMAGE,
-  ICON_LEAF,
-  ICON_STONE,
-  ICON_WALL,
   LOGO_EMBLEM,
   whatsappLink,
 } from "@/lib/site";
 
 const highlights = [
-  ["Pedra selecionada", ICON_STONE],
-  ["Paredes com presença", ICON_WALL],
-  ["Acabamento autoral", ICON_LEAF],
+  { label: "Pedra selecionada", icon: Mountain },
+  { label: "Paredes com presença", icon: Rows3 },
+  { label: "Acabamento autoral", icon: Leaf },
 ];
 
 export default function Hero() {
@@ -89,13 +86,13 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.36 }}
               className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
             >
-              {highlights.map(([item, icon]) => (
+              {highlights.map(({ label, icon: Icon }) => (
                 <li
-                  key={item}
+                  key={label}
                   className="flex items-center gap-2 text-sm font-bold tracking-wide text-gold-soft"
                 >
-                  <img src={icon} alt="" className="h-6 w-6 object-contain" />
-                  {item}
+                  <Icon aria-hidden="true" className="h-6 w-6 text-gold" strokeWidth={1.8} />
+                  {label}
                 </li>
               ))}
             </motion.ul>

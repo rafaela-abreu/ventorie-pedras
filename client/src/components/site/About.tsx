@@ -1,9 +1,9 @@
+import { Leaf } from "lucide-react";
 import Reveal from "./Reveal";
 import {
   BRAND_POSITIONING,
   BRAND_SIGNATURE,
   BRAND_SLOGAN,
-  ICON_LEAF,
   LOGO_EMBLEM,
   OWNER_NAME,
   OWNER_ROLE,
@@ -92,7 +92,7 @@ export default function About() {
 
             <Reveal delay={0.1}>
               <div className="mt-8 flex items-start gap-4 rounded-2xl border border-gold/30 bg-[#2a0317]/45 p-5">
-                    <img src={ICON_LEAF} alt="" className="mt-1 h-8 w-8 shrink-0 object-contain" />
+                    <Leaf aria-hidden="true" className="mt-1 h-8 w-8 shrink-0 text-gold" strokeWidth={1.8} />
                     <div>
                       <p className="font-display text-lg font-bold leading-snug text-gold">
                     “{BRAND_POSITIONING}”

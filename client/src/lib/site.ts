@@ -17,9 +17,6 @@ export const LOGO_EMBLEM = "/images/logo-emblem.jpg";
 
 export const HERO_IMAGE = "/images/wall-house.webp";
 export const SHOWROOM_IMAGE = HERO_IMAGE;
-export const ICON_LEAF = "/images/wall-detail.jpg";
-export const ICON_STONE = "/images/wall-garden.webp";
-export const ICON_WALL = "/images/wall-night.jpg";
 
 export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

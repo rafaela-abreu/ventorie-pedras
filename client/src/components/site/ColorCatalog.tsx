@@ -59,14 +59,16 @@ const palette: readonly PaletteColor[] = [
 
 const featuredWalls = [
   {
-    title: "Cinza com glitter",
+    title: "Pedra cinza com glitter",
     subtitle: "Sofisticação mineral",
-    image: "/images/wall-detail.jpg",
+    alt: "Amostra de pedra cinza com glitter mineral",
+    image: "/images/stone-gray-glitter.webp",
   },
   {
-    title: "Azul bebê com glitter",
+    title: "Pedra azul bebê com glitter",
     subtitle: "Delicadeza luminosa",
-    image: "/images/wall-interior.jpg",
+    alt: "Amostra de pedra azul bebê com glitter mineral",
+    image: "/images/stone-light-blue-glitter.webp",
   },
 ] as const;
 
@@ -179,7 +181,7 @@ export default function ColorCatalog() {
                   <div className="relative aspect-[1.45] overflow-hidden">
                     <img
                       src={wall.image}
-                      alt={`Parede de pedra ${wall.title}`}
+                      alt={wall.alt}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/80 via-transparent to-transparent" />
