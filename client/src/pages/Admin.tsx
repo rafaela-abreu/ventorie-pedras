@@ -47,12 +47,12 @@ export default function Admin() {
           <div className="flex items-center gap-3">
             <img
               src={LOGO_EMBLEM}
-              alt="Ventorié Pedras"
+              alt="VentoriÊ Pedras"
               className="h-11 w-auto rounded-xl ring-1 ring-gold/40"
             />
             <div>
               <p className="font-display text-lg font-extrabold tracking-[0.14em] text-gold">
-                PAINEL VENTORIÉ PEDRAS
+                PAINEL VENTORIÊ PEDRAS
               </p>
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-soft/80">
                 Catálogo · Música · Segurança
@@ -112,7 +112,7 @@ export default function Admin() {
         </div>
 
         <p className="mt-10 text-center text-xs font-semibold text-gold-soft/60">
-          Ventorié Pedras · Márcia Júlia, idealizadora da marca · pedrasventorie@gmail.com
+          VentoriÊ Pedras · Márcia Júlia, idealizadora da marca · pedrasventorie@gmail.com
         </p>
       </div>
     </div>

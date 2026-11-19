@@ -32,12 +32,12 @@ export default function SiteHeader() {
         <a href="#inicio" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
             src={LOGO_EMBLEM}
-            alt="Emblema Ventorié Pedras"
+            alt="Emblema VentoriÊ Pedras"
             className="h-10 w-auto rounded-xl ring-1 ring-gold/45 shadow-[0_10px_25px_-15px_rgba(0,0,0,0.9)] lg:h-12"
           />
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-extrabold tracking-[0.14em] text-gold lg:text-xl">
-              VENTORIÉ PEDRAS
+              VENTORIÊ PEDRAS
             </span>
             <span className="mt-1 text-[8px] font-bold uppercase tracking-[0.12em] text-gold-soft/85 sm:text-[9.5px] sm:tracking-[0.2em] lg:text-[10.5px] lg:tracking-[0.24em]">
               Márcia Júlia · Idealizadora da marca

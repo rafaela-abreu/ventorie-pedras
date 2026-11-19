@@ -27,7 +27,7 @@ export default function SecurityManager() {
         <div>
           <h2 className="font-display text-2xl font-extrabold text-gold">Segurança do painel</h2>
           <p className="text-sm font-semibold text-gold-soft/85">
-            Altere a senha de acesso quando precisar.
+            Use pelo menos 12 caracteres e altere a senha quando precisar.
           </p>
         </div>
       </div>
@@ -36,8 +36,8 @@ export default function SecurityManager() {
         className="mt-5 space-y-4"
         onSubmit={event => {
           event.preventDefault();
-          if (newPassword.length < 6) {
-            toast.error("A nova senha deve ter pelo menos 6 caracteres.");
+          if (newPassword.length < 12) {
+            toast.error("A nova senha deve ter pelo menos 12 caracteres.");
             return;
           }
           if (newPassword !== confirmPassword) {

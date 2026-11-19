@@ -7,7 +7,7 @@ const CATALOG_PDF = "./catalogo/catalogo-cores-ventorie.pdf";
 const pages = [
   {
     number: "01",
-    label: "A essência da Ventorié",
+    label: "A essência da VentoriÊ",
     image: "./catalogo/pagina-1.png",
   },
   {
@@ -59,14 +59,16 @@ const palette: readonly PaletteColor[] = [
 
 const featuredWalls = [
   {
-    title: "Cinza com glitter",
-    subtitle: "Sofisticação mineral",
-    image: "/images/wall-detail.jpg",
+    title: "Quarto infantil do menino",
+    subtitle: "Parede de pedra com brilho",
+    alt: "Quarto infantil azul com parede de pedras irregulares e brilho, como referência para menino",
+    image: "/images/kids-room-boy.jpg",
   },
   {
-    title: "Azul bebê com glitter",
-    subtitle: "Delicadeza luminosa",
-    image: "/images/wall-interior.jpg",
+    title: "Quarto infantil da menina",
+    subtitle: "Parede de pedra com brilho",
+    alt: "Quarto infantil rosa com parede de pedras irregulares e brilho, como referência para menina",
+    image: "/images/kids-room-girl.jpg",
   },
 ] as const;
 
@@ -86,7 +88,7 @@ export default function ColorCatalog() {
               <span className="text-gold">a sua presença.</span>
             </h2>
             <p className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-              Explore a seleção de tons da Ventorié Pedras e encontre a nuance que combina com a
+              Explore a seleção de tons da VentoriÊ Pedras e encontre a nuance que combina com a
               personalidade do seu projeto. Um catálogo visual para escolher com calma e segurança.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -106,7 +108,7 @@ export default function ColorCatalog() {
               className="mt-5 inline-flex items-center gap-2 font-display text-sm font-extrabold text-gold transition-colors hover:text-gold-soft"
             >
               <Leaf size={16} />
-              Quero escolher uma cor com a Ventorié
+              Quero escolher uma cor com a VentoriÊ
             </a>
           </Reveal>
 
@@ -123,7 +125,7 @@ export default function ColorCatalog() {
                   <div className="relative overflow-hidden rounded-[1rem]">
                     <img
                       src={page.image}
-                      alt={`Página ${page.number} do catálogo de cores Ventorié Pedras`}
+                      alt={`Página ${page.number} do catálogo de cores VentoriÊ Pedras`}
                       className="aspect-[0.707] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/85 via-transparent to-transparent" />
@@ -163,24 +165,24 @@ export default function ColorCatalog() {
         <Reveal delay={0.24}>
           <div className="mt-16 rounded-[2rem] border border-gold/30 bg-[linear-gradient(135deg,rgba(59,5,34,0.92),rgba(42,3,23,0.96))] p-5 shadow-[0_34px_90px_-50px_rgba(0,0,0,0.95)] sm:p-7">
             <div className="text-center">
-              <p className="eyebrow">Destaque especial</p>
+              <p className="eyebrow">Carro-chefe da VentoriÊ</p>
               <h3 className="mt-3 text-2xl sm:text-3xl">
-                <span className="text-gold-shine">Nosso carro-chefe</span>{" "}
-                <span className="text-gold">do catálogo das cores.</span>
+                <span className="text-gold-shine">Brilho que encanta:</span>{" "}
+                <span className="text-gold">paredes de pedra para quartos infantis.</span>
               </h3>
               <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-gold-soft/80 sm:text-base">
-                Duas leituras sofisticadas da pedra com glitter mineral: a profundidade do cinza e
-                a luminosidade delicada do azul bebê.
+                Pedra moledo com brilho para transformar a parede do quarto infantil em um cenário especial.
+                A VentoriÊ executa somente o revestimento da parede; os demais elementos são referências de ambientação.
               </p>
             </div>
-            <div className="mt-7 grid gap-5 md:grid-cols-2">
+            <div className="mt-7 grid gap-5">
               {featuredWalls.map(wall => (
-                <article key={wall.title} className="group overflow-hidden rounded-[1.4rem] border border-gold/25 bg-[#2a0317]">
-                  <div className="relative aspect-[1.45] overflow-hidden">
+                <article key={wall.title} className="group mx-auto w-full max-w-xl overflow-hidden rounded-[1.4rem] border border-gold/25 bg-[#2a0317]">
+                  <div className="relative overflow-hidden">
                     <img
                       src={wall.image}
-                      alt={`Parede de pedra ${wall.title}`}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      alt={wall.alt}
+                      className="block h-auto w-full transition duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/80 via-transparent to-transparent" />
                     <div className="absolute inset-x-5 bottom-4">

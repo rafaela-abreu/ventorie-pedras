@@ -54,12 +54,12 @@ export default function Catalog() {
         <Reveal className="max-w-3xl">
           <p className="eyebrow">Catálogo</p>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]">
-            <span className="text-gold-shine">Paredes de pedra</span>{" "}
-            <span className="text-gold">pedra selecionadas</span>
+            <span className="text-gold-shine">Paredes residenciais</span>{" "}
+            <span className="text-gold">de pedra moledo</span>
           </h2>
           <p className="mt-5 text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-            Uma vitrine viva dos nossos projetos em pedra. As fotos abaixo são publicadas
-            diretamente pela Ventorié Pedras e atualizadas conforme novas paredes são entregues.
+            Uma vitrine de paredes residenciais de pedra moledo. A VentoriÊ executa exclusivamente
+            esse serviço; as fotos do catálogo são atualizadas conforme novos projetos são entregues.
           </p>
         </Reveal>
 
@@ -115,7 +115,7 @@ export default function Catalog() {
               Novas pedras a caminho
             </p>
             <p className="mx-auto mt-3 max-w-xl text-sm font-semibold leading-relaxed text-gold-soft/90">
-              O catálogo está sendo atualizado com novas paredes de pedra. Enquanto isso,
+              O catálogo está sendo atualizado com novas paredes de pedra moledo. Enquanto isso,
               fale com a Márcia Júlia e receba referências, medidas e orçamento.
             </p>
             <a

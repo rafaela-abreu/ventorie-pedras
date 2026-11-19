@@ -20,12 +20,12 @@ export default function SiteFooter() {
           <div>
             <img
               src={LOGO_EMBLEM}
-              alt="Emblema Ventorié Pedras — Márcia Júlia, idealizadora da marca"
+              alt="Emblema VentoriÊ Pedras — Márcia Júlia, idealizadora da marca"
               className="w-full max-w-[290px] rounded-xl border border-gold/25"
             />
             <p className="mt-5 max-w-sm text-sm font-semibold leading-relaxed text-gold-soft/85">
-              Paredes de pedra com presença, textura e acabamento autoral. O ápice da
-              magnitude para fachadas, jardins e áreas externas.
+              Especialistas exclusivamente em paredes de pedra moledo, com seleção cuidadosa e
+              acabamento autoral para residências.
             </p>
           </div>
 
@@ -97,10 +97,19 @@ export default function SiteFooter() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-gold/20 pt-6 sm:flex-row">
           <p className="text-xs font-semibold tracking-wide text-gold-soft/70">
-            © {new Date().getFullYear()} Ventorié Pedras · {OWNER_NAME}, {OWNER_ROLE}
+            © {new Date().getFullYear()} VentoriÊ Pedras · {OWNER_NAME}, {OWNER_ROLE}
           </p>
           <p className="text-xs font-semibold tracking-[0.16em] text-gold-soft/60">
             PAREDES DE PEDRA · O ÁPICE DA MAGNITUDE
+          </p>
+        </div>
+        <div className="mt-6 border-t border-gold/15 pt-5 text-center">
+          <p className="font-display text-[10px] font-extrabold uppercase tracking-[0.28em] text-gold/70">
+            Projeto desenvolvido por:
+          </p>
+          <p className="mt-1 font-display text-base font-extrabold text-gold">Rafaela Abreu</p>
+          <p className="mt-0.5 text-xs font-semibold tracking-wide text-gold-soft/75">
+            Engenheira e Arquiteta de Software
           </p>
         </div>
       </div>

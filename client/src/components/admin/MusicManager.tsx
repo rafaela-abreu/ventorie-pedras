@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Loader2, Music2, Power, Trash2, Upload, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
-import { formatBytes, readFileAsBase64 } from "@/lib/files";
+import { formatBytes } from "@/lib/files";
 
 const MAX_AUDIO_BYTES = 20 * 1024 * 1024;
 
@@ -14,21 +14,11 @@ export default function MusicManager() {
   const [file, setFile] = useState<File | null>(null);
   const [title, setTitle] = useState("");
   const [confirmRemove, setConfirmRemove] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
 
   const refresh = async () => {
     await Promise.all([utils.admin.musicSettings.invalidate(), utils.music.get.invalidate()]);
   };
-
-  const upload = trpc.admin.uploadMusic.useMutation({
-    onSuccess: async () => {
-      toast.success("Música publicada no site. Já está tocando a 50% do volume.");
-      setFile(null);
-      setTitle("");
-      if (inputRef.current) inputRef.current.value = "";
-      await refresh();
-    },
-    onError: error => toast.error(error.message || "Não foi possível enviar a música."),
-  });
 
   const toggleEnabled = trpc.admin.setMusicEnabled.useMutation({
     onSuccess: async () => {
@@ -66,13 +56,32 @@ export default function MusicManager() {
       toast.error("Escolha o arquivo de música.");
       return;
     }
-    const payload = await readFileAsBase64(file);
-    upload.mutate({
-      title: title.trim(),
-      fileName: payload.fileName,
-      mimeType: payload.mimeType,
-      dataBase64: payload.dataBase64,
-    });
+    setIsUploading(true);
+    try {
+      const response = await fetch("/api/uploads/music", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": file.type,
+          "X-File-Name": encodeURIComponent(file.name),
+          "X-Upload-Title": encodeURIComponent(title.trim()),
+        },
+        body: file,
+      });
+      const result = (await response.json()) as { success?: boolean; error?: string };
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Não foi possível enviar a música.");
+      }
+      toast.success("Música publicada no site. Já está tocando a 50% do volume.");
+      setFile(null);
+      setTitle("");
+      if (inputRef.current) inputRef.current.value = "";
+      await refresh();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível enviar a música.");
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   return (
@@ -167,7 +176,7 @@ export default function MusicManager() {
               className="field-input mt-2"
               value={title}
               onChange={event => setTitle(event.target.value)}
-              placeholder="Ex.: Ventorié — Ambiente"
+              placeholder="Ex.: VentoriÊ — Ambiente"
               maxLength={160}
             />
           </label>
@@ -175,10 +184,10 @@ export default function MusicManager() {
           <button
             type="button"
             onClick={submit}
-            disabled={upload.isPending}
+            disabled={isUploading}
             className="btn-light w-full"
           >
-            {upload.isPending ? (
+            {isUploading ? (
               <Loader2 size={18} className="animate-spin" />
             ) : (
               <Upload size={18} />

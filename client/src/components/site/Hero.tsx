@@ -1,21 +1,18 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Leaf, Mountain, Rows3 } from "lucide-react";
 import {
   BRAND_POSITIONING,
   BRAND_SIGNATURE,
   BRAND_SLOGAN,
   HERO_IMAGE,
-  ICON_LEAF,
-  ICON_STONE,
-  ICON_WALL,
   LOGO_EMBLEM,
   whatsappLink,
 } from "@/lib/site";
 
 const highlights = [
-  ["Pedra selecionada", ICON_STONE],
-  ["Paredes com presença", ICON_WALL],
-  ["Acabamento autoral", ICON_LEAF],
+  { label: "Pedra moledo selecionada", icon: Mountain },
+  { label: "Paredes sob medida", icon: Rows3 },
+  { label: "Assentamento cuidadoso", icon: Leaf },
 ];
 
 export default function Hero() {
@@ -43,7 +40,7 @@ export default function Hero() {
             >
               <Leaf size={14} className="text-gold" />
               <span className="eyebrow !text-[10px] sm:!text-[11px]">
-                Paredes de pedra · Design de exteriores
+                Paredes residenciais de pedra moledo
               </span>
             </motion.div>
 
@@ -53,8 +50,8 @@ export default function Hero() {
               transition={{ duration: 0.85, delay: 0.08 }}
               className="mt-6 font-display text-[2.6rem] leading-[1.02] font-extrabold sm:text-6xl lg:text-[4.4rem]"
             >
-              <span className="text-gold-shine block">Paredes de pedra</span>
-              <span className="text-gold-shine block">pedra que impõem</span>
+              <span className="text-gold-shine block">Parede de pedra</span>
+              <span className="text-gold-shine block">moledo com</span>
               <span className="block text-gold">presença.</span>
             </motion.h1>
 
@@ -64,8 +61,8 @@ export default function Hero() {
               transition={{ duration: 0.85, delay: 0.18 }}
               className="mt-7 max-w-xl text-base font-semibold leading-relaxed text-gold-soft sm:text-lg"
             >
-              A Ventorié Pedras cria paredes de pedra com força, textura e acabamento
-              impecável para fachadas, jardins e ambientes que pedem presença.
+              A VentoriÊ trabalha exclusivamente com paredes de pedra moledo para residências,
+              unindo a beleza natural da pedra a uma execução cuidadosa e elegante.
             </motion.p>
 
             <motion.div
@@ -89,13 +86,13 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.36 }}
               className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
             >
-              {highlights.map(([item, icon]) => (
+              {highlights.map(({ label, icon: Icon }) => (
                 <li
-                  key={item}
+                  key={label}
                   className="flex items-center gap-2 text-sm font-bold tracking-wide text-gold-soft"
                 >
-                  <img src={icon} alt="" className="h-6 w-6 object-contain" />
-                  {item}
+                  <Icon aria-hidden="true" className="h-6 w-6 text-gold" strokeWidth={1.8} />
+                  {label}
                 </li>
               ))}
             </motion.ul>
@@ -110,7 +107,7 @@ export default function Hero() {
             <div className="animate-float-slow rounded-[2rem] border border-gold/45 bg-[#2a0317]/55 p-3 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur-md">
               <img
                 src={LOGO_EMBLEM}
-                alt="Emblema Ventorié Pedras — Márcia Júlia, idealizadora da marca"
+                alt="Emblema VentoriÊ Pedras — Márcia Júlia, idealizadora da marca"
                 className="w-full rounded-[1.6rem]"
               />
             </div>
