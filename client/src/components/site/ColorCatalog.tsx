@@ -7,7 +7,7 @@ const CATALOG_PDF = "./catalogo/catalogo-cores-ventorie.pdf";
 const pages = [
   {
     number: "01",
-    label: "A essência da Ventorié",
+    label: "A essência da VentoriÊ",
     image: "./catalogo/pagina-1.png",
   },
   {
@@ -88,7 +88,7 @@ export default function ColorCatalog() {
               <span className="text-gold">a sua presença.</span>
             </h2>
             <p className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-              Explore a seleção de tons da Ventorié Pedras e encontre a nuance que combina com a
+              Explore a seleção de tons da VentoriÊ Pedras e encontre a nuance que combina com a
               personalidade do seu projeto. Um catálogo visual para escolher com calma e segurança.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -108,7 +108,7 @@ export default function ColorCatalog() {
               className="mt-5 inline-flex items-center gap-2 font-display text-sm font-extrabold text-gold transition-colors hover:text-gold-soft"
             >
               <Leaf size={16} />
-              Quero escolher uma cor com a Ventorié
+              Quero escolher uma cor com a VentoriÊ
             </a>
           </Reveal>
 
@@ -125,7 +125,7 @@ export default function ColorCatalog() {
                   <div className="relative overflow-hidden rounded-[1rem]">
                     <img
                       src={page.image}
-                      alt={`Página ${page.number} do catálogo de cores Ventorié Pedras`}
+                      alt={`Página ${page.number} do catálogo de cores VentoriÊ Pedras`}
                       className="aspect-[0.707] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/85 via-transparent to-transparent" />

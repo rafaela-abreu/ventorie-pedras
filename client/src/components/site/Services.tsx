@@ -1,27 +1,22 @@
-import { Leaf, Mountain, Rows3, TreePine } from "lucide-react";
+import { Leaf, Mountain, Rows3 } from "lucide-react";
 import Reveal from "./Reveal";
 import { whatsappLink } from "@/lib/site";
 
 const services = [
   {
     icon: Mountain,
-    title: "Pedra",
-    text: "Pedra selecionada pela textura, tonalidade e presença que entrega ao projeto.",
+    title: "Paredes de pedra moledo",
+    text: "Esse é o serviço da VentoriÊ: paredes residenciais executadas exclusivamente com pedra moledo.",
   },
   {
     icon: Rows3,
-    title: "Paredes de pedra",
-    text: "Muros e paredes com encaixe orgânico, volume e acabamento para valorizar fachadas e jardins.",
-  },
-  {
-    icon: TreePine,
-    title: "Paisagismo com pedra",
-    text: "Composições de pedra que conversam com verde, luz e arquitetura sem perder a naturalidade.",
+    title: "Planejamento sob medida",
+    text: "Cada parede é planejada conforme o espaço da residência e a composição natural da pedra.",
   },
   {
     icon: Leaf,
-    title: "Acabamento autoral",
-    text: "Cada parede é pensada para revelar a beleza irregular da pedra com acabamento preciso.",
+    title: "Assentamento e acabamento",
+    text: "Execução cuidadosa da parede de pedra moledo, do encaixe das peças ao acabamento final.",
   },
 ];
 
@@ -33,12 +28,12 @@ export default function Services() {
         <Reveal className="max-w-3xl">
           <p className="eyebrow">O que fazemos</p>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]">
-            <span className="text-gold-shine">Serviços pensados</span>{" "}
-            <span className="text-gold">para durar gerações</span>
+            <span className="text-gold-shine">Um trabalho, feito</span>{" "}
+            <span className="text-gold">com excelência</span>
           </h2>
           <p className="mt-5 text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-            Do primeiro esboço à instalação, acompanhamos cada etapa para que a pedra chegue ao
-            ambiente exatamente como foi imaginada.
+            A VentoriÊ realiza exclusivamente paredes de pedra moledo em residências. Do
+            planejamento ao assentamento, cada etapa é dedicada a esse único serviço.
           </p>
         </Reveal>
 
@@ -82,8 +77,8 @@ export default function Services() {
                   Fale com a Márcia Júlia
                 </h3>
                 <p className="mt-3 text-sm font-semibold leading-relaxed text-gold-soft/90">
-                  Conte o ambiente, as medidas e a sua referência. Retornamos com sugestões de
-                  pedras e um orçamento personalizado.
+                  Conte onde deseja a parede de pedra moledo, informe as medidas e receba um
+                  orçamento personalizado.
                 </p>
               </div>
               <a

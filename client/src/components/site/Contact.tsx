@@ -107,7 +107,7 @@ export default function Contact() {
               <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gold/10 blur-2xl" />
               <img
                 src={LOGO_EMBLEM}
-                alt="Emblema Ventorié Pedras com Márcia Júlia, idealizadora da marca"
+                alt="Emblema VentoriÊ Pedras com Márcia Júlia, idealizadora da marca"
                 className="w-full rounded-[1.4rem] border border-gold/25"
               />
               <div className="mt-6 space-y-4">

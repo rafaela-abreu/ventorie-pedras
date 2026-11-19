@@ -12,7 +12,7 @@ export default function AdminLogin({ onSuccess }: { onSuccess: () => void }) {
     onSuccess: async () => {
       await utils.admin.status.invalidate();
       await utils.admin.listItems.invalidate();
-      toast.success("Bem-vinda ao painel da Ventorié Pedras.");
+      toast.success("Bem-vinda ao painel da VentoriÊ Pedras.");
       onSuccess();
     },
     onError: error => {
@@ -35,12 +35,12 @@ export default function AdminLogin({ onSuccess }: { onSuccess: () => void }) {
           <div className="flex items-center gap-3">
             <img
               src={LOGO_EMBLEM}
-              alt="Ventorié Pedras"
+              alt="VentoriÊ Pedras"
               className="h-12 w-auto rounded-xl ring-1 ring-gold/40"
             />
             <div>
               <p className="font-display text-lg font-extrabold tracking-[0.14em] text-gold">
-                VENTORIÉ PEDRAS
+                VENTORIÊ PEDRAS
               </p>
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-soft/80">
                 Painel administrativo
@@ -95,7 +95,7 @@ export default function AdminLogin({ onSuccess }: { onSuccess: () => void }) {
           </form>
 
           <p className="mt-6 rounded-2xl border border-gold/20 bg-[#2a0317]/50 p-3 text-center text-[11px] font-semibold leading-relaxed text-gold-soft/75">
-            Acesso exclusivo da Ventorié Pedras. Guarde a senha em local seguro e altere-a em
+            Acesso exclusivo da VentoriÊ Pedras. Guarde a senha em local seguro e altere-a em
             “Segurança” sempre que precisar.
           </p>
         </div>

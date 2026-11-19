@@ -176,7 +176,7 @@ export default function MusicManager() {
               className="field-input mt-2"
               value={title}
               onChange={event => setTitle(event.target.value)}
-              placeholder="Ex.: Ventorié — Ambiente"
+              placeholder="Ex.: VentoriÊ — Ambiente"
               maxLength={160}
             />
           </label>

@@ -12,16 +12,16 @@ import {
 
 const pillars = [
   {
-    title: "pedra selecionado",
-    text: "Escolha cuidadosa da pedra, textura e tonalidade para cada parede.",
+    title: "Pedra moledo selecionada",
+    text: "Escolha cuidadosa das pedras que formarão cada parede residencial.",
   },
   {
     title: "Parede com presença",
-    text: "Cada composição nasce do encontro entre pedra, paisagismo, luz e arquitetura.",
+    text: "Cada parede de pedra moledo é planejada para valorizar o espaço da residência.",
   },
   {
     title: "Acabamento preciso",
-    text: "O cuidado no assentamento valoriza a força natural da pedra.",
+    text: "O assentamento preciso revela a beleza natural da pedra moledo.",
   },
 ];
 
@@ -36,19 +36,19 @@ export default function About() {
               <div className="gold-frame overflow-hidden rounded-[2rem]">
                 <img
                   src={SHOWROOM_IMAGE}
-                  alt="Showroom de pedras naturais da Ventorié Pedras"
+                  alt="Residência contemporânea com parede de pedra natural"
                   className="h-[420px] w-full object-cover sm:h-[520px]"
                 />
               </div>
               <div className="absolute -bottom-8 left-6 flex items-center gap-3 rounded-2xl border border-gold/40 bg-[#2a0317]/92 px-4 py-3 backdrop-blur sm:left-10">
                 <img
                   src={LOGO_EMBLEM}
-                  alt="Emblema Ventorié Pedras"
+                  alt="Emblema VentoriÊ Pedras"
                   className="h-10 w-auto rounded-lg ring-1 ring-gold/40"
                 />
                 <div>
                   <p className="font-display text-sm font-extrabold tracking-[0.16em] text-gold">
-                    VENTORIÉ PEDRAS
+                    VENTORIÊ PEDRAS
                   </p>
                   <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold-soft/85">
                     {BRAND_SLOGAN}
@@ -64,16 +64,15 @@ export default function About() {
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]">
                 <span className="text-gold-shine">O ápice da magnitude</span>
                 <br />
-                <span className="text-gold">em paredes de pedra</span>
+                <span className="text-gold">em paredes de pedra moledo</span>
               </h2>
               <p className="mt-6 text-base font-semibold leading-relaxed text-gold-soft sm:text-lg">
-                A Ventorié Pedras nasceu para transformar pedra em paredes que dominam a
-                paisagem. Sob a direção de {OWNER_NAME}, cada projeto começa na leitura do espaço
-                e termina em uma composição forte, natural e inesquecível.
+                Sob a direção de {OWNER_NAME}, a VentoriÊ dedica seu trabalho a um único serviço:
+                paredes residenciais de pedra moledo, executadas com presença e cuidado.
               </p>
               <p className="mt-4 text-base font-semibold leading-relaxed text-gold-soft/90">
-                Nossa especialidade é uma só: paredes de pedra, executadas com seleção,
-                proporção e acabamento autoral para fachadas, jardins e áreas externas.
+                A empresa não realiza paisagismo nem outras decorações. Cada projeto é focado na
+                seleção, no assentamento e no acabamento da parede de pedra moledo.
               </p>
             </Reveal>
 

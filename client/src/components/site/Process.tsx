@@ -8,13 +8,13 @@ const steps = [
   },
   {
     number: "02",
-    title: "Seleção da pedra",
-    text: "Definimos a textura e a tonalidade da pedra para a sua parede.",
+    title: "Seleção da pedra moledo",
+    text: "Selecionamos e organizamos as pedras que farão parte da sua parede.",
   },
   {
     number: "03",
     title: "Composição da parede",
-    text: "Ajustamos paginação, encaixes, paisagismo e iluminação para criar presença.",
+    text: "Planejamos a paginação e os encaixes para valorizar a parede de pedra moledo.",
   },
   {
     number: "04",
@@ -36,7 +36,7 @@ export default function Process() {
               <span className="text-gold">do início ao acabamento</span>
             </h2>
             <p className="mt-5 max-w-md text-base font-semibold leading-relaxed text-gold-soft">
-              Quatro etapas simples para transformar pedra em uma parede marcante.
+              Quatro etapas simples, todas dedicadas à execução da sua parede de pedra moledo.
             </p>
           </Reveal>
 
