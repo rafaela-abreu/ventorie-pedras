@@ -59,16 +59,16 @@ const palette: readonly PaletteColor[] = [
 
 const featuredWalls = [
   {
-    title: "Pedra cinza com glitter",
-    subtitle: "Sofisticação mineral",
-    alt: "Amostra de pedra cinza com glitter mineral",
-    image: "/images/stone-gray-glitter.webp",
+    title: "Quarto infantil do menino",
+    subtitle: "Parede de pedra com brilho",
+    alt: "Quarto infantil azul com parede de pedras irregulares e brilho, como referência para menino",
+    image: "/images/kids-room-boy.jpg",
   },
   {
-    title: "Pedra azul bebê com glitter",
-    subtitle: "Delicadeza luminosa",
-    alt: "Amostra de pedra azul bebê com glitter mineral",
-    image: "/images/stone-light-blue-glitter.webp",
+    title: "Quarto infantil da menina",
+    subtitle: "Parede de pedra com brilho",
+    alt: "Quarto infantil rosa com parede de pedras irregulares e brilho, como referência para menina",
+    image: "/images/kids-room-girl.jpg",
   },
 ] as const;
 
@@ -165,24 +165,24 @@ export default function ColorCatalog() {
         <Reveal delay={0.24}>
           <div className="mt-16 rounded-[2rem] border border-gold/30 bg-[linear-gradient(135deg,rgba(59,5,34,0.92),rgba(42,3,23,0.96))] p-5 shadow-[0_34px_90px_-50px_rgba(0,0,0,0.95)] sm:p-7">
             <div className="text-center">
-              <p className="eyebrow">Destaque especial</p>
+              <p className="eyebrow">Carro-chefe da VentoriÊ</p>
               <h3 className="mt-3 text-2xl sm:text-3xl">
-                <span className="text-gold-shine">Nosso carro-chefe</span>{" "}
-                <span className="text-gold">do catálogo das cores.</span>
+                <span className="text-gold-shine">Brilho que encanta:</span>{" "}
+                <span className="text-gold">paredes de pedra para quartos infantis.</span>
               </h3>
               <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-gold-soft/80 sm:text-base">
-                Duas leituras sofisticadas da pedra com glitter mineral: a profundidade do cinza e
-                a luminosidade delicada do azul bebê.
+                Pedra moledo com brilho para transformar a parede do quarto infantil em um cenário especial.
+                A VentoriÊ executa somente o revestimento da parede; os demais elementos são referências de ambientação.
               </p>
             </div>
-            <div className="mt-7 grid gap-5 md:grid-cols-2">
+            <div className="mt-7 grid gap-5">
               {featuredWalls.map(wall => (
-                <article key={wall.title} className="group overflow-hidden rounded-[1.4rem] border border-gold/25 bg-[#2a0317]">
-                  <div className="relative aspect-[1.45] overflow-hidden">
+                <article key={wall.title} className="group mx-auto w-full max-w-xl overflow-hidden rounded-[1.4rem] border border-gold/25 bg-[#2a0317]">
+                  <div className="relative overflow-hidden">
                     <img
                       src={wall.image}
                       alt={wall.alt}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      className="block h-auto w-full transition duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2a0317]/80 via-transparent to-transparent" />
                     <div className="absolute inset-x-5 bottom-4">
